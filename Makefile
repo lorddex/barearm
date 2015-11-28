@@ -1,5 +1,6 @@
 SCRIPT=test
-MCPU=cortex-a9
+#MCPU=cortex-a9
+MCPU=arm926ej-s
 STARTUP=startup
 
 all:
