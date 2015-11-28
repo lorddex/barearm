@@ -2,6 +2,8 @@ SCRIPT=test
 #MCPU=cortex-a9
 MCPU=arm926ej-s
 STARTUP=startup
+M=versatilepb
+#M=virt
 
 all:
 	arm-uclinuxeabi-as -mcpu=${MCPU} -g ${STARTUP}.s -o ${STARTUP}.o
@@ -11,3 +13,6 @@ all:
 
 clean:
 	rm -rf ${SCRIPT}.o ${SCRIPT}.elf ${SCRIPT}.bin ${STARTUP}.o
+
+run:
+	qemu-system-arm -M ${M} -nographic -kernel ${SCRIPT}.bin
