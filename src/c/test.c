@@ -1,4 +1,4 @@
-//#define UART 0x10009000
+//#define UART 0x9000000
 #define UART 0x101f1000
 
 void c_init() {
